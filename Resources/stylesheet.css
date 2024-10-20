@@ -1,162 +1,210 @@
-/*     Body     */
+/* ******* Global Settings ****** */
 html {
-	font-family: Helvetica;
-	font-size: 22px;
-	color: seashell;
-	background-color: black;
-	opacity: 0.9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: #000000;
+  opacity: 0.9;
 }
-.mainContainer {
-	display: flex;
-	max-width: 1200px;
-	margin: 0 auto;
-}
-.subContainer {
-	display: flex;
-	max-width: 1000px;
-	margin: 0 auto;
-}
-h1,h2,h4,h5 {
-	padding: 10px;
-	font-family:Helvetica;
-	color: seashell;
-	font-weight:bold;
+h1,
+h2,
+h4,
+h5 {
+  font-family: Helvetica;
+  color: seashell;
+  font-weight: bold;
+  margin: 10px;
 }
 h1 {
-	font-size: 32px;
+  font-size: 32px;
 }
 h2 {
-	font-size: 28px;
+  font-size: 28px;
 }
 h3 {
-	font-size: 26px;
+  font-size: 26px;
 }
 h4 {
-	font-size: 24px;
+  font-size: 24px;
 }
-/*     Header     */
-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: black;
-	align-items: center;
-	max-width: 100%;
-	height: 69px;
-	position: sticky;
-	top: 0;
-	border-bottom: 1px solid seashell;
+.mainContainer {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-header img {
-	height: 50px;
-	margin-left: 10px;
+.subContainer {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.nav a {
-	margin-right:10px;
-	padding: 0 15px;
-	font-family: Helvetica;
-	font-size: 22px;
-	color: seashell;
-	transition: color 500ms linear,background-color 500ms linear,border-radius 500ms linear;
+/* ****** Navigation Bar ******** */
+nav {
+  display: flex;
+  background-color: #000000;
+  height: 70px;
+  border-bottom: 1px solid seashell;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 1;
 }
-.nav a:hover {
-	background-color: seashell;
-	color: red;
-	border-radius: 30px;
+
+.logoImg img {
+  height: 50px;
+  margin-left: 10px;
 }
-/*     Main banner     */
-.mainBanner {
-	display: flex;
-	background-image:url(Images/background.jpg);
-	background-position:center;
-	background-repeat:no-repeat;
-	background-size:cover;
-	width:100%;
-	height: 700px;
+.navBar {
+  display: inline-flex;
+  flex-basis: 500px;
+  justify-content: space-between;
+  margin-right: 15px;
+  flex-wrap: wrap;
+}
+.navBar a {
+  color: seashell;
+}
+.navBar a:hover {
+  color: rgb(82, 82, 82);
+  text-decoration: none;
+}
+/* ****** Main Banner Section ******** */
+
+.bgImage {
+  display: flex;
+  background-image: url(/Resources/images/img-mission-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
 }
 .mission {
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 1200px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
-.mission h2,h4 {
-	background-color: black;
-	width: 100%;
-	text-align: center;
+
+.mission span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #000000;
+  align-self: center;
 }
-/*     Main Content     */	
-.mainContent {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;	
+/* ****** Tea of the Month ******** */
+.teaTitles {
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.images {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin: 30px 0;
-	flex-wrap: wrap;
+.teaTitles h2,
+h4 {
+  color: seashell;
 }
-.title img {
-	width: 300px;
-	height: 200px;
-	margin: 0 10px 10px 0;
+.teaImages {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: seashell;
 }
-.title {
-	display: block;
-	text-align: center;
-	margin: 20px 10px;
+.teaImages span {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 20px 0;
 }
-/*     Locations     */
-.locationImg {
-	background-image: url(Images/locationsBackground.jpg);
-	background-position:center;
-	background-repeat: no-repeat;
-	height: 500px;
-	width: 100%;
-	margin-top: 20px;
+.teaImages img {
+  height: 200px;
+  width: 300px;
 }
-.locationImg h2 {
-	text-align: center;
-	padding-top: 100px;
-	margin-bottom: 15px;
-}
+/* ****** Locations ******** */
 .locations {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+  margin-top: 35px;
+}
+.locationImg {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(/Resources/images/img-locations-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.addresses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: -50px;
 }
 .address {
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	width: 300px;
-	background-color: black;
-	opacity: 0.85;
-	padding: 20px;
-	margin: 0 15px;
-}
-.address h3 {
-	padding: 20px 0;	
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 40px;
+  padding: 10px;
+  border-radius: 25px;
+  width: 300px;
+  background-color: #000000;
+  opacity: 0.8;
 }
 .address p {
-	padding: 20px 0;
+  line-height: 0.8;
 }
-/*    Contact     */
+/* ****** Contact Section ******** */
 .contact {
-	text-align: center;
-	margin: 0 auto;
-	height: 200px;
-	padding: 20px
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  margin-top: 40px;
 }
-/*    Footer     */
-footer {
-	display:flex;
-	margin-left: 20px;
-	padding-bottom:50px;	
+/* ****** Media Queries Section ******** */
+
+@media (max-width: 600px) {
+  .logoImg img {
+    display: none;
+  }
+
+  .teaTitles h2,
+  h4 {
+    font-size: 18px;
+  }
+
+  .addresses {
+    margin-top: 0;
+  }
+
+  .locationImg h2 {
+    font-size: 16px;
+  }
+  .address {
+    font-size: 15px;
+  }
+
+  .address p {
+    line-height: 0.1;
+  }
+  .mission h2,
+  h4 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
 }

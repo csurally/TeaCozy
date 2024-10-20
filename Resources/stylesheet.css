@@ -76,7 +76,7 @@ nav {
 
 .bgImage {
   display: flex;
-  background-image: url(/Resources/images/background.jpg);
+  background-image: url(/Resources/Images/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -137,7 +137,7 @@ h4 {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  background-image: url(/Resources/images/locationsBackground.jpg);
+  background-image: url(/Resources/Images/locationsBackground.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
